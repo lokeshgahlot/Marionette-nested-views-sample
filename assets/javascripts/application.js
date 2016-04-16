@@ -17,10 +17,10 @@ var Heroes = Backbone.Collection.extend({
 
 var Villains = Backbone.Collection.extend({
   model: Villain
-})
+});
 
 // Views
-var VillainView = Backbone.Marionette.ItemView({
+var VillainView = Backbone.Marionette.ItemView.extend({
   template: '#villain-template',
   tagName: 'li',
   events: {
@@ -39,7 +39,7 @@ var HeroView = Backbone.Marionette.CompositeView.extend({
     'click a': 'logInfoUrl'
   },
   logInfoUrl: function() {
-    console.log(this.model.get('info-url'));
+    console.log('*******s', this.model.get('info_url'));
   },
   initialize: function() {
     this.collection = this.model.get('villains');
