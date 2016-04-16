@@ -22,7 +22,13 @@ var Villains = Backbone.Collection.extend({
 // Views
 var VillainView = Backbone.Marionette.ItemView({
   template: '#villain-template',
-  tagName: 'li'
+  tagName: 'li',
+  events: {
+    'click': 'logInfoUrl'
+  },
+  logInfoUrl: function() {
+    console.log(this.model.get('info_url'));
+  }
 });
 
 var HeroView = Backbone.Marionette.CompositeView.extend({
