@@ -30,6 +30,9 @@ var HeroView = Backbone.Marionette.CompositeView.extend({
   },
   logInfoUrl: function() {
     console.log(this.model.get('info-url'));
+  },
+  initialize: function() {
+    this.collection = this.model.get('villains');
   }
 });
 
