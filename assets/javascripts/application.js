@@ -41,6 +41,7 @@ var HeroView = Backbone.Marionette.CompositeView.extend({
 });
 
 var AccordionView = Backbone.Marionette.CollectionView.extend({
+  id: 'heroList',
   itemView: HeroView,
   className: 'accordion'
 });
