@@ -34,12 +34,13 @@ var VillainView = Backbone.Marionette.ItemView.extend({
 var HeroView = Backbone.Marionette.CompositeView.extend({
   template: '#accordion-group-template',
   className: 'accordion-group',
-
+  itemView: VillainView,
+  itemViewContainer: 'ul',
   events: {
     'click a': 'logInfoUrl'
   },
   logInfoUrl: function() {
-    console.log('*******s', this.model.get('info_url'));
+    console.log(this.model.get('info_url'));
   },
   initialize: function() {
     this.collection = this.model.get('villains');
