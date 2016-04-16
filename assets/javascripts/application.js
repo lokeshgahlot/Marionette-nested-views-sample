@@ -54,6 +54,13 @@ $(function() {
     var accordionView = new AccordionView({
       collection: heroes
     });
+
+    heroes.each(function(hero) {
+      var villains = hero.get('villains');
+      var villainCollection = new Villains(villains);
+      hero.set('villains', villainCollection);
+    });
+
     Myapp.mainRegion.show(accordionView);
   });
 
