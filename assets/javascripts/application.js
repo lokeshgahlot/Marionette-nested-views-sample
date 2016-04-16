@@ -15,6 +15,12 @@ var Heroes = Backbone.Collection.extend({
 });
 
 // Views
+
+var VillainView = Backbone.Marionette.ItemView({
+  template: '#villain-template',
+  tagName: 'li'
+});
+
 var HeroView = Backbone.Marionette.CompositeView.extend({
   template: '#accordion-group-template',
   className: 'accordion-group',
