@@ -8,14 +8,18 @@ Myapp.addRegions({
 
 // Model
 var Hero = Backbone.Model.extend({});
+var Villain = Backbone.Model.extend({});
 
 // Collection
 var Heroes = Backbone.Collection.extend({
   model: Hero
 });
 
-// Views
+var Villains = Backbone.Collection.extend({
+  model: Villain
+})
 
+// Views
 var VillainView = Backbone.Marionette.ItemView({
   template: '#villain-template',
   tagName: 'li'
